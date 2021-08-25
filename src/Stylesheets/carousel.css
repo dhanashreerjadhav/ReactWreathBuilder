@@ -1,0 +1,12 @@
+.corouselTitle{
+    margin-left: 50%;
+    margin-top: 20px;
+    font-weight: bold;
+}
+.carousel-caption {
+    position: unset !important;
+    color: black !important;
+}
+.carouselDiv{
+    background-color: gainsboro;
+}
