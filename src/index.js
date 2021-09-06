@@ -4,15 +4,17 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import WreathBuilder from './Components/WreathBuilder';
-import Carousel from './Components/Carousel';
+import MainContainer from './Components/MainContainer';
 import CanvasObject from './Components/CanvasObject';
 import RenderCanvas from './Components/RenderCanvas';
+
 // import { FabricContextProvider } from './Components/FabricContext';
 
 ReactDOM.render(
   <React.StrictMode>
-    <WreathBuilder/>
-    <Carousel/>
+    {/* <WreathBuilder/> */}
+    
+    <MainContainer></MainContainer>
     {/* <FabricContext>
 
     </FabricContext> */}

@@ -14,7 +14,7 @@ class CarouselClass extends Component{
         'Add upto 3 stems & bushes',
         'Add upto 3 picks',
         'Add upto 3 accessories'];
-        var wreathImages=["/Images/wreath1.jpg","/Images/wreath2.jpg",
+        var wreathImages=["http://i.stack.imgur.com/vxCmj.png","/Images/wreath2.jpg",
                           "/Images/wreath3.jpg","/Images/wreath4.jpg"];
         var stemsbushesImages=["/Images/stem1.jpg","/Images/stem2.jpg",
         "/Images/stem3.jpg","/Images/stem4.jpg"];
@@ -23,6 +23,7 @@ class CarouselClass extends Component{
         var accessoryImages=["/Images/accessory1.jpg","/Images/accessory2.jpg",
         "/Images/accessory3.jpg","/Images/accessory4.jpg"]
         let portletNumberArray=[8,8,8,8];
+        let props1 = {...this.props};
         return(
             <div>
                 <Carousel interval={null} className="carouselDiv">
@@ -34,22 +35,22 @@ class CarouselClass extends Component{
                         {portletNumberArray.map(function(item1,i){
                             if(item == 'Select a wreath form'){
                                 return(
-                                    <Portlet dataImage={wreathImages[i]}/>
+                                    <Portlet dataImage={wreathImages[i]} images = {props1}/>
                                 )
                             }
                             else if(item == 'Add upto 3 stems & bushes'){
                                 return(
-                                    <Portlet dataImage={stemsbushesImages[i]}/>
+                                    <Portlet dataImage={stemsbushesImages[i]} images = {props1}/>
                                 )
                             }
                             else if(item == 'Add upto 3 picks'){
                                 return(
-                                    <Portlet dataImage={pickImages[i]}/>
+                                    <Portlet dataImage={pickImages[i]} images = {props1}/>
                                 )
                             }
                             else if(item == 'Add upto 3 accessories'){
                                 return(
-                                    <Portlet dataImage={accessoryImages[i]}/>
+                                    <Portlet dataImage={accessoryImages[i]} images = {props1}/>
                                 )
                             }  
                             })}

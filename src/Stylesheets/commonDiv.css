@@ -1,0 +1,9 @@
+#commonSpaceToDraw{
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.selectionClass{
+    background: rgba(255,255,255,.5);
+}

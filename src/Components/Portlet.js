@@ -26,28 +26,29 @@ class Portlet extends Component{
     }
     addCanvasElement(){
         console.log('abc');
-        var canvas = new fabric.Canvas('canvas', {
-            width:'1000',
-            height:'300',
-        })
-        var img = this.state.img;
+        console.log(this.props.images);
+        // var canvas = new fabric.Canvas('canvas', {
+        //     width:'1000',
+        //     height:'300',
+        // })
+        // var img = this.state.img;
         
-        fabric.Image.fromURL(img, function(oImg) {
-            oImg.set('height', 300);
-            oImg.set('width', 300);
-            oImg.scale(0.5).set('borderColor', 'black');
-            canvas.add(oImg);
-            canvas.centerObject(oImg);
-          });
-          canvas.add(this.circle1);
-          canvas.centerObject(this.circle1);
-          canvas.add(this.circle2);
-          canvas.centerObject(this.circle2);
+        // fabric.Image.fromURL(img, function(oImg) {
+        //     oImg.set('height', 300);
+        //     oImg.set('width', 300);
+        //     oImg.scale(0.5).set('borderColor', 'black');
+        //     canvas.add(oImg);
+        //     canvas.centerObject(oImg);
+        //   });
+        //   canvas.add(this.circle1);
+        //   canvas.centerObject(this.circle1);
+        //   canvas.add(this.circle2);
+        //   canvas.centerObject(this.circle2);
     }
     render(){
         return(
-               <div className="portletDiv" onClick={this.addCanvasElement}>
-                   <img src={this.props.dataImage} height="200" width="120"/>
+               <div className="portletDiv" onClick={() => this.props.images.updateImages(this.props.dataImage)}>
+                   <img src={this.props.dataImage} height="200" width="120" />
                </div>
         )
     }
